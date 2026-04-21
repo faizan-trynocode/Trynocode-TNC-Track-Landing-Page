@@ -27,7 +27,7 @@ export default function Hero() {
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-success" />
               <span className="text-sm font-medium text-primary">
-                Trusted by 500+ organizations
+                Manage People. Track Work. Grow Faster.
               </span>
             </motion.div>
 
@@ -37,9 +37,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl">
-              From attendance and daily tasks to skill training and performance
-              awards — TNC Track gives you complete visibility into your
-              team&apos;s productivity, all in one platform.
+              TNC Track brings together everything you need to run your team efficiently - attendance, projects, tasks, bandwidth, performance, <br/>and training — all in one place.
             </p>
           </motion.div>
 
