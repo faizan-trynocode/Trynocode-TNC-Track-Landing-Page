@@ -13,12 +13,7 @@ const faqs = [
   {
     question: "How does attendance tracking work?",
     answer:
-      "Team members can check in and check out with a single tap. The system records timestamps, supports geolocation verification, and automatically calculates work hours. Managers get real-time headcounts and can track late arrivals, early departures, and absences.",
-  },
-  {
-    question: "What is TNC Training?",
-    answer:
-      "TNC Training is our built-in skill assessment module where you can create custom training paths based on your tech stack. Team members take interactive quizzes, and their scores are tracked over time — helping you identify knowledge gaps and plan targeted upskilling.",
+      "Team members can check in and check out with a single tap. The system records timestamps, verification and automatically calculates work hours. Managers get real-time headcounts and can track late arrivals, early departures, and absences.",
   },
   {
     question: "How does the awards and points system work?",
@@ -34,11 +29,6 @@ const faqs = [
     question: "Is TNC Track secure?",
     answer:
       "Absolutely. We use enterprise-grade encryption for all data at rest and in transit. Role-based access controls ensure team members only see what they're authorized to. We follow industry best practices for data security and privacy compliance.",
-  },
-  {
-    question: "How quickly can I get started?",
-    answer:
-      "You can sign up and have your team onboarded in under 15 minutes. Our guided setup wizard walks you through creating your organization, inviting members, and configuring your first attendance rules and task categories. No complex IT setup required.",
   },
 ];
 
@@ -95,7 +85,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 lg:py-32">
+    <section id="faq" className="pt-12 pb-24 lg:pt-16 lg:pb-32">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">

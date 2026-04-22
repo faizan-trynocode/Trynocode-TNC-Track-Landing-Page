@@ -8,7 +8,6 @@ import Logo from "./Logo";
 const navLinks = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -50,13 +49,13 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-        <Link
+          <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="whitespace-nowrap rounded-lg border border-slate-200 bg-slate-50 px-5 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition-colors hover:bg-slate-100"
+            className="whitespace-nowrap rounded-lg gradient-bg px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
           >
-            Login
+            Schedule a Demo
           </Link>
         </div>
 
@@ -110,11 +109,8 @@ export default function Navbar() {
               </a>
             ))}
             <hr className="border-border" />
-            <a href="#" className="text-sm font-medium text-muted py-2">
-              Log In
-            </a>
-            <a href="#cta" className="btn-primary text-sm text-center !py-2.5">
-              Get Started Free
+            <a href="#" className="btn-primary text-sm text-center !py-2.5">
+              Schedule a Demo
             </a>
           </div>
         </motion.div>

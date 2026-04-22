@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 w-full">
       {/* Background Elements */}
       <div className="absolute inset-0 gradient-bg-subtle" />
       <div className="absolute inset-0 pattern-dots opacity-70" />
@@ -37,7 +37,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl">
-              TNC Track brings together everything you need to run your team efficiently - attendance, projects, tasks, bandwidth, performance, <br/>and training — all in one place.
+              TNC Track brings together everything you need to run your team efficiently — attendance, projects, tasks, bandwidth, performance, and training — all in one place.
             </p>
           </motion.div>
 
@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-            className="relative"
+            className="relative px-6 sm:px-4"
           >
             <div className="animate-float">
               <DashboardMockup />
@@ -127,7 +127,7 @@ function DashboardMockup() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
-        className="absolute -top-4 -right-4 rounded-xl border border-slate-200 bg-white p-3 shadow-lg shadow-slate-200/80"
+        className="absolute -top-4 right-0 sm:-right-4 rounded-xl border border-slate-200 bg-white p-3 shadow-lg shadow-slate-200/80"
       >
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
@@ -147,7 +147,7 @@ function DashboardMockup() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
-        className="absolute -bottom-3 -left-4 rounded-xl border border-slate-200 bg-white p-3 shadow-lg shadow-slate-200/80"
+        className="absolute -bottom-3 left-0 sm:-left-4 rounded-xl border border-slate-200 bg-white p-3 shadow-lg shadow-slate-200/80"
       >
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center">

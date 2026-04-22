@@ -55,7 +55,7 @@ export default function Logo({
   const wordmark =
     variant === "footer" ? (
       <span className={`font-bold text-slate-900 ${textSize}`}>
-        TNC <span className="text-primary">Track</span>
+        Trynocode
       </span>
     ) : (
       <span className={`font-bold text-foreground ${textSize}`}>

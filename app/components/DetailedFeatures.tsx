@@ -5,58 +5,44 @@ import AnimatedSection from "./AnimatedSection";
 
 const detailedFeatures = [
   {
-    title: "Real-Time Attendance & Checkout",
-    subtitle: "Know who's in, who's out — instantly",
+    title: "Team Operations Hub",
+    subtitle: "Everything in one place",
     description:
-      "One-tap check-in and check-out with timestamps, geolocation, and automatic work-hour calculations. Get real-time headcounts, track late arrivals, early departures, and generate accurate attendance reports effortlessly.",
+      "Manage your entire team's day-to-day operations from one place — from attendance to tasks and project execution. Track check-ins, work hours, leaves, and task progress in real time while ensuring clear ownership and accountability across projects.",
     highlights: [
-      "Geolocation-based check-in verification",
-      "Automatic work-hour calculation",
-      "Late arrival & early departure alerts",
-      "Export-ready attendance reports",
+      "Real-time check-in & work-hour tracking",
+      "Leave management & approval workflows",
+      "Task ownership & progress visibility",
+      "Project-level accountability reports",
     ],
     visual: <AttendanceVisual />,
   },
   {
-    title: "Personalized Daily Task Boards",
-    subtitle: "Every team member, every task, tracked",
+    title: "Performance & Resource Intelligence",
+    subtitle: "Build a high-performing team",
     description:
-      "Assign and manage daily tasks with priorities, deadlines, and status tracking. Each individual sees their personalized task board, making it easy to stay focused and accountable throughout the day.",
+      "Build a high-performing team with complete visibility into skills and workload. Monitor training progress, identify skill gaps, and track employee bandwidth to balance work effectively and improve overall productivity.",
     highlights: [
-      "Drag-and-drop task management",
-      "Priority levels & deadlines",
-      "Real-time progress tracking",
-      "Daily completion summaries",
-    ],
-    visual: <TaskBoardVisual />,
-    reversed: true,
-  },
-  {
-    title: "TNC Training & Skill Assessment",
-    subtitle: "Measure what your team truly knows",
-    description:
-      "Interactive training modules let you assess each team member's knowledge of your tech stack. Track skill levels, identify knowledge gaps, and plan targeted upskilling programs with data-backed insights.",
-    highlights: [
-      "Custom training modules by tech stack",
-      "Quiz-based skill assessments",
-      "Individual skill-level tracking",
-      "Knowledge gap analysis & reports",
+      "Skill gap analysis & training tracking",
+      "Employee bandwidth monitoring",
+      "Workload balancing across teams",
+      "Productivity trends & insights",
     ],
     visual: <TrainingVisual />,
+    reversed: true,
   },
   {
-    title: "Awards, Points & Leaderboards",
-    subtitle: "Recognize, reward, and retain top talent",
+    title: "AI Automation & Insights",
+    subtitle: "Let AI do the heavy lifting",
     description:
-      "Gamify workplace performance with a points system. Employees earn points for attendance streaks, task completions, and training scores. Highlight top performers on leaderboards and celebrate achievements with badges.",
+      "Simplify everything with AI — from generating reports and insights to managing organisational structure and documentation. Ask questions, get real-time updates, automate emails, and handle tasks like employee records and experience letters effortlessly.",
     highlights: [
-      "Points for attendance, tasks & training",
-      "Real-time leaderboards",
-      "Custom badges & achievements",
-      "Monthly & quarterly award cycles",
+      "Ask anything, get instant answers",
+      "Auto-generate reports & documents",
+      "Automated emails & notifications",
+      "Employee records & experience letters",
     ],
-    visual: <AwardsVisual />,
-    reversed: true,
+    visual: <TaskBoardVisual />,
   },
 ];
 
@@ -271,62 +257,6 @@ function TrainingVisual() {
                 className={`h-full rounded-full bg-gradient-to-r ${skill.color}`}
               />
             </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function AwardsVisual() {
-  const leaderboard = [
-    { rank: 1, name: "Rahul S.", points: 2450, badge: "gold" },
-    { rank: 2, name: "Priya M.", points: 2180, badge: "silver" },
-    { rank: 3, name: "Amit K.", points: 1920, badge: "bronze" },
-  ];
-
-  const badgeColors: Record<string, string> = {
-    gold: "from-amber-400 to-yellow-500",
-    silver: "from-gray-300 to-gray-400",
-    bronze: "from-orange-300 to-orange-500",
-  };
-
-  return (
-    <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xl shadow-slate-200/70">
-      <div className="mb-5 flex items-center justify-between">
-        <h4 className="font-bold text-slate-900">Leaderboard</h4>
-        <span className="text-xs font-medium text-slate-500">This Month</span>
-      </div>
-      <div className="space-y-3">
-        {leaderboard.map((person, i) => (
-          <motion.div
-            key={person.name}
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            transition={{ delay: 0.3 + i * 0.12 }}
-            className={`flex items-center justify-between rounded-xl p-4 ${
-              person.rank === 1
-                ? "border border-amber-200 bg-gradient-to-r from-amber-50 to-yellow-50"
-                : "bg-slate-50"
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${badgeColors[person.badge]} text-sm font-bold text-white`}
-              >
-                #{person.rank}
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-slate-900">{person.name}</div>
-                <div className="text-xs text-slate-500">{person.points.toLocaleString()} points</div>
-              </div>
-            </div>
-            {person.rank === 1 && (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-amber-500">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" />
-              </svg>
-            )}
           </motion.div>
         ))}
       </div>

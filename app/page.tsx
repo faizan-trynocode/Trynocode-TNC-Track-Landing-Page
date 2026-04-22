@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
+import AIInsights from "./components/AIInsights";
 import DetailedFeatures from "./components/DetailedFeatures";
-import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
+import ScheduleDemo from "./components/ScheduleDemo";
 import Footer from "./components/Footer";
+import BuiltForYourTeam from "./components/BuiltForYourTeam";
 
 export default function Home() {
   return (
@@ -14,10 +15,11 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <AIInsights />
         <DetailedFeatures />
-        <HowItWorks />
-        <Testimonials />
+        <BuiltForYourTeam />
         <FAQ />
+        <ScheduleDemo />
       </main>
       <Footer />
     </>
