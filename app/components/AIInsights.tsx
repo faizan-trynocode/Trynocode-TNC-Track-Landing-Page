@@ -1,7 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
-import botAnimation from "@/public/lottie.json";
+import botAnimation from "../animation/lottie.json";
 import AnimatedSection from "./AnimatedSection";
 
 const highlights = [
